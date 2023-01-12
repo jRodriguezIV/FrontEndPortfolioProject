@@ -48,7 +48,7 @@ form {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 20px;
+    margin: 5%;
 
 
 
@@ -59,7 +59,7 @@ form {
     font-size: x-small;
     text-align: center;
     left: auto;
-    right: auto;
+    right: center;
 }
 
 h4 {
