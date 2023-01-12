@@ -21,6 +21,16 @@ fetch (
         console.log(disc[0])
 
     })
+    console.log(button)
+
+    button.addEventListener("click", (event)=> {
+        event.preventDefault;
+        console.log(input.value)
+
+        //add fetch here
+    })
+
+
 
     fetch (
         `${URL}/drug/label${KEY}`
