@@ -1,0 +1,67 @@
+html {
+    text-align: center;
+    display: grid;
+    margin: 20px;
+
+    color: #392c28;
+
+
+    background-image: linear-gradient(to top, #781305, #8e3d2a, #a1604e, #b18376, #bea69f);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    grid-area: header;
+    text-shadow: 0 1px 0 #533e39,
+    0 2px 0 #71544d,
+    0 3px 0 #FFF5EE,
+    0 4px 0 #BA8474,
+    0 5px 0 #BA8474,
+    0 6px 1px rgba(121, 124, 138, 0.1),
+    0 0 5px rgba(204, 213, 243, 0.1),
+    0 1px 3px #C0A6A4,
+    0 3px 5px #C0A6A4,
+    0 5px 10px #FFF5EE,
+    0 10px 10px #653C3A,
+    0 20px 20px #aad9ff26;
+
+}
+
+body {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header header header"
+    ". form ."
+    "disc disc disc";
+}
+
+form {
+    grid-area: form;
+}
+
+.disc{
+    grid-area: disc;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+
+
+
+
+}
+
+.disc p {
+    font-size: x-small;
+    text-align: center;
+    left: auto;
+    right: auto;
+}
+
+h4 {
+    margin: inherit;
+}
