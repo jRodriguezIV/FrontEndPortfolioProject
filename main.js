@@ -41,6 +41,12 @@ fetch (
 
 
 
+        // going to create a drop down after search is made, labeled with Searchable Fields to relay information of choice.
+        // will also add a list of "important" fields at default after search.
+        // will brainstorm on how to create a list of all the current drugs labels.
+        // will brainstorm on another button(random or drop) for those who can't think of a drug to search.
+
+
 
 // Promise.all([data1, data2])
 //     .then((response) => response.forEach((res) => {
