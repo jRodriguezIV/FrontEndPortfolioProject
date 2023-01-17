@@ -43,8 +43,9 @@ fetch (
                 console.log(result.headers)
                 console.log(input.value.split(" ").join("+"))
                 
-                // re.innerHTML=""
 
+
+                re.innerHTML = ""
 
                
 
@@ -52,16 +53,16 @@ fetch (
                 result.results.forEach((el) =>{
                     if (el.openfda) { 
                         console.log(el) //.products[0].brand_name  .marketing_status !== "Discontinued"
-                    let p = document.createElement("p") 
-                    p.setAttribute("class", "resultsp")
-                    re.appendChild(p)
-
+                        let p = document.createElement("p") 
+                        p.setAttribute("class", "resultsp")
+                        re.appendChild(p)
+                    
                     p.innerHTML = `
                     <span><b>Brand Name:</b><br>${el.openfda.brand_name}</br></span>
                     <span><b>Generic Name</b><br>${el.openfda.generic_name}</br></span>
                     <span><b>EPC:</b><br>${el.openfda.pharm_class_epc}</br></span>
                     <span><b>Manufacturer:</b><br>${el.openfda.manufacturer_name}</br></span>
-                    <span><a>
+                    
                     
 
                     
