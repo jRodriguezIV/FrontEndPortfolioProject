@@ -48,11 +48,13 @@ form {
 .disc {
     text-align: center;
     grid-area: disc;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
     margin: 10px;
+    z-index: -1;
+    color: #947369;
 
 }
 
@@ -82,5 +84,5 @@ h4 {
 span {
     font-size: smaller;
     display: inline-block;
-    padding: 2px
+    padding: 10px;
 }

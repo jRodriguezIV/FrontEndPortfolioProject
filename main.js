@@ -43,7 +43,7 @@ fetch (
                 console.log(result.headers)
                 console.log(input.value.split(" ").join("+"))
                 
-                re.innerHTML=""
+                // re.innerHTML=""
 
 
                
@@ -59,7 +59,7 @@ fetch (
                     p.innerHTML = `
                     <span><b>Brand Name:</b><br>${el.openfda.brand_name}</br></span>
                     <span><b>Generic Name</b><br>${el.openfda.generic_name}</br></span>
-                    <span><b>Generic Name</b><br>${el.openfda.generic_name}</br></span>
+                    <span><b>EPC</b><br>${el.openfda.pharm_class_epc}</br></span>
                     
 
                     
