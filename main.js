@@ -35,7 +35,7 @@ fetch (
         
         fetch (
 
-            `${URL}/drug/drugsfda${KEY}${SEARCH}${input.value.split(" ").join("+")}&limit=10`
+            `${URL}/drug/drugsfda${KEY}${SEARCH}${input.value.split(" ").join("+")}&limit=20`
             ).then((response)=> {
                 return response.json()
             })
@@ -59,7 +59,9 @@ fetch (
                     p.innerHTML = `
                     <span><b>Brand Name:</b><br>${el.openfda.brand_name}</br></span>
                     <span><b>Generic Name</b><br>${el.openfda.generic_name}</br></span>
-                    <span><b>EPC</b><br>${el.openfda.pharm_class_epc}</br></span>
+                    <span><b>EPC:</b><br>${el.openfda.pharm_class_epc}</br></span>
+                    <span><b>Manufacturer:</b><br>${el.openfda.manufacturer_name}</br></span>
+                    <span><a>
                     
 
                     
