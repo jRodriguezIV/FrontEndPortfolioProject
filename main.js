@@ -7,6 +7,8 @@ const data1 = fetch(`${URL}/drug/label.json?limit=1`)
 const data2 = fetch(`${URL}/drug/event.json?limit=1`)
 let disc = document.getElementsByClassName("disc")
 let re = document.getElementById("results")
+let link = document.getElementById("link")
+
 
 let form = document.querySelector("form")
 let input = document.querySelector("input")
@@ -40,9 +42,12 @@ fetch (
                 return response.json()
             })
             .then((result)=>{
-                console.log(result.headers)
-                console.log(input.value.split(" ").join("+"))
-                
+               
+                let a = document.querySelector("a")
+                let p = document.createElement("p")
+                a ? a.remove() : console.log("nothing")
+                p.innerHTML = `<strong><a id=link href="#">Events</a></strong>`
+                form.after(p)
 
 
                 re.innerHTML = ""
@@ -52,28 +57,31 @@ fetch (
 
                 result.results.forEach((el) =>{
                     if (el.openfda) { 
+                        if (Object.keys(el.openfda).length > 0) {
                         console.log(el) //.products[0].brand_name  .marketing_status !== "Discontinued"
                         let p = document.createElement("p") 
                         p.setAttribute("class", "resultsp")
                         re.appendChild(p)
                     
                     p.innerHTML = `
-                    <span><b>Brand Name:</b><br>${el.openfda.brand_name}</br></span>
-                    <span><b>Generic Name</b><br>${el.openfda.generic_name}</br></span>
-                    <span><b>EPC:</b><br>${el.openfda.pharm_class_epc}</br></span>
-                    <span><b>Manufacturer:</b><br>${el.openfda.manufacturer_name}</br></span>
-                    
-                    
-
-                    
+                    <span><b>Brand Name:</b><br>${el.openfda.brand_name}</span>
+                    <span><b>Generic Name:</b><br>${el.openfda.generic_name}</span>
+                    <span><b>EPC:</b><br>${el.openfda.pharm_class_epc}</span>
+                    <span><b>Manufacturer:</b><br>${el.openfda.manufacturer_name}</span>
+                    <span><b>Substance Name:</b><br>${el.openfda.substance_name}</span>
+                    <span><b>Product Type:</b><br>${el.openfda.product_type}</span>
+                    <span><b>Route:</b><br>${el.openfda.route}</span>
                     `
-                    }
-                } )
+                    }}
+                })
 
 
 
-            }).catch(err => console.log(err))
-        //add fetch here
+            }).catch((err) => {
+
+                console.log(err)
+            })
+        //
     })
 
 

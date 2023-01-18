@@ -72,7 +72,7 @@ h4 {
 .results {
     grid-area: results;
     padding: 50px 50px; 
-    text-align: left;
+    text-align: center;
 }
 .resultsp { 
     border: outset #a66959;
@@ -82,7 +82,15 @@ h4 {
 }
 
 span {
-    font-size: smaller;
-    display: inline-block;
+    font-size: small;
+    display: block;
     padding: 10px;
+}
+
+#link:visited{
+    color: #392c28;
+}
+
+#link:hover {
+    color: #781305;
 }
