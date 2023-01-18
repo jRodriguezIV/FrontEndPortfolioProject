@@ -87,6 +87,10 @@ span {
     padding: 10px;
 }
 
+#link {
+    color: #392c28
+}
+
 #link:visited{
     color: #392c28;
 }
