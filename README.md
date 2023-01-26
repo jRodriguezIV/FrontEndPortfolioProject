@@ -2,7 +2,7 @@
 
 # RinfoX
 
-##Welcome to RinfoX. 
+## Welcome to RinfoX. 
 
 This Web Application allows users to type in the name of any **FDA Approved Medication** and recieve multitudes of information that is normally not easily/readily available for public understanding.
 
