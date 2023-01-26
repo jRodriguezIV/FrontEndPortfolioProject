@@ -42,7 +42,7 @@ fetch (
             `${URL}/drug/drugsfda${KEY}${SEARCH}${input.value.split(" ").join("+")}&limit=20`
             ).then((response)=> { 
                 if (!response.ok) {
-                alert("Please Enter a Valid Medication")
+                alert("Please Enter a Valid FDA Approved Medication")
             } else {
             return response.json()
             }
