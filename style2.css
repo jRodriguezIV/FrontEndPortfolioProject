@@ -6,7 +6,8 @@ html {
     color: #392c28;
 
 
-    background-image: linear-gradient(to top, #781305, #8e3d2a, #a1604e, #b18376, #bea69f);
+    /* background-image: linear-gradient(to top, #781305, #8e3d2a, #a1604e, #b18376, #bea69f); */
+    background-image: linear-gradient(to top, #bea69f, #b18376, #a1604e, #8e3d2a, #781305);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,8 +90,7 @@ span {
 }
 
 #link {
-    color: #392c28;
-
+    color: #392c28
 }
 
 #link:visited{
