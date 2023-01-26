@@ -16,8 +16,6 @@ fetch (
         p.setAttribute("class", "discp")
         disc[0].append(p)
         p.textContent = result.meta.disclaimer
-        console.log(disc[0])
-        console.log(localStorage)
         
         result.results.forEach((el) =>{
 
@@ -30,13 +28,13 @@ fetch (
                 p.innerHTML = 
                 `
                 <span><b>${val.charAt(0).toUpperCase() + val.slice(1)}</b></span>
-                <span><b>Boxed Warning:</b><br>${el.boxed_warning[0]}</span>
-                <span><b>Warnings and Cautions:</b><br>${el.warnings_and_cautions[0]}</span>
-                <span><b>Adverse Reactions:</b><br>${el.adverse_reactions[0]}</span>
                 <span><b>Overdosage Information:</b><br>${el.overdosage[0]}</span>
+                <span><b>Adverse Reactions:</b><br>${el.adverse_reactions[0]}</span>
                 <span><b>Pregnancy:</b><br>${el.pregnancy[0]}</span>
-                <span><b>Product Type:</b><br>${el.openfda.product_type}</span>
-                <span><b>Route:</b><br>${el.openfda.route}</span>
+                <span><b>Warnings and Cautions:</b><br>${el.warnings_and_cautions[0]}</span>
+                <span><b>Boxed Warning:</b><br>${el.boxed_warning[0]}</span>
+
+
                 `
 
             
