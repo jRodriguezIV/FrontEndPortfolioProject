@@ -1,6 +1,4 @@
-// let log = console.log
 const URL = "https://api.fda.gov"
-let URLafter= ""
 const KEY = ".json?api_key=bKom7JyWySs5BqcEmqXhdlkPJsokfGFeRF5at5r1"
 const SEARCH = "&search="
 let disc = document.getElementsByClassName("disc")
@@ -12,10 +10,10 @@ let body2 = document.getElementById("body2")
 
 let form = document.querySelector("form")
 let input = document.querySelector("input")
-// const JSON = ".json?"
 
 
-//Initial Disclaimer Fetch
+
+
 fetch (
     `${URL}/drug/label${KEY}`
 ).then((response)=>response.json())
@@ -25,17 +23,14 @@ fetch (
         p.setAttribute("class", "discp")
         disc[0].append(p)
         p.textContent = result.meta.disclaimer
-        // console.log(disc[0])
         
     }).catch(error=>console.log(error))
-    // console.log(form)
     
     form.addEventListener("submit", (event)=> {
         
         event.preventDefault();
         val = input.value
         localStorage.setItem("val", input.value)
-        // console.log(input.value)
         
         fetch (
             
@@ -53,7 +48,6 @@ fetch (
                 let p = document.createElement("p")
                 a ? a.remove() : console.log("nothing")
                 p.innerHTML = `<strong><a id="link" href="javascript:void(0)" onClick="events()">Warnings</a></strong>`
-                // <a id="link" href="javascript:null" onClick="javascript:events()">Events</a>
                 form.after(p)
                 
                 
@@ -66,7 +60,6 @@ fetch (
                 result.results.forEach((el) =>{
                     if (el.openfda) { 
                         if (Object.keys(el.openfda).length > 0) {
-                        console.log(el) //.products[0].brand_name  .marketing_status !== "Discontinued"
                         let p = document.createElement("p") 
                         p.setAttribute("class", "resultsp")
                         re.appendChild(p)
@@ -86,27 +79,11 @@ fetch (
                 
             }
             }).catch((err) => console.log(err))
-            //
         })
         
         
         function events(e) {
             window.location.href = "./index2.html"
-            
-            
-            // fetch (
-                //     `${URL}/drug/event${KEY}${SEARCH}${input.value.split(" ").join("+")}&limit=20`
-                // ).then(response => response.json()
-                // ).then(result => {
-                    //     console.log(result)
-                    
-                    
-                    // }).catch(error=>console.log(error))
-                    
-                    
-                    //  window.history.replaceState("/index2.html" )
-                    
-                    
                 }
                 
                 
