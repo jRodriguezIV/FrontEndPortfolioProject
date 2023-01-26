@@ -7,7 +7,7 @@ This Web Application allows users to type in the name of any **FDA Approved Medi
 
 When prompted for a search, the user will recieve a number of results which include the searched term.
 
-This information gives is listed out as follows : 
+This information given is listed out as follows : 
 "Brand Name",
 "Generic Name",
 "EPC" or "Established "Pharmacologic Class",
@@ -16,8 +16,14 @@ This information gives is listed out as follows :
 "Product Type",
 "Route".
 
-There is also a "Warnings" link which directs the user to another page that shows the following: 
+There is also a "Warnings" link which directs the user to another page that shows the following information in relevance to the searched medication: 
 "Overdosage Information",
 "Adverse Reactions",
 "Warnings and Cautions",
 "Boxed Warning".
+
+
+At the Bottom of the page you can always find the Official OpenFDA Disclaimer.
+
+Please feel free to use RinfoX to research any, and all FDA approved medications!
+
