@@ -40,8 +40,15 @@ fetch (
         fetch (
             
             `${URL}/drug/drugsfda${KEY}${SEARCH}${input.value.split(" ").join("+")}&limit=20`
-            ).then((response)=> response.json())
-            .then((result)=>{
+            ).then((response)=> { 
+                if (!response.ok) {
+                alert("Please Enter a Valid Medication")
+            } else {
+            return response.json()
+            }
+        }).then((result)=>{
+            if(result) {
+                console.log(result)
                 let a = document.querySelector("a")
                 let p = document.createElement("p")
                 a ? a.remove() : console.log("nothing")
@@ -51,6 +58,7 @@ fetch (
                 
                 
                 re.innerHTML = ""
+            
 
                
 
@@ -76,7 +84,7 @@ fetch (
                     }}
                 })
                 
-                
+            }
             }).catch((err) => console.log(err))
             //
         })

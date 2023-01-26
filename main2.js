@@ -9,8 +9,15 @@ let val = localStorage.val
 
 fetch (
     `${URL}/drug/label.json?${SEARCH}"${val.split(" ").join("+")}"limit=20`
-).then((response)=>response.json())
-    .then((result)=>{
+).then((response)=>{
+    if (!response.ok) {
+        alert("Please Enter a Valid Medication")
+    } else {
+    return response.json()
+    }
+})
+.then((result)=>{
+        console.log(result.ok)
         console.log(result)
         let p = document.createElement("p")
         p.setAttribute("class", "discp")
